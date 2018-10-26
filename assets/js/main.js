@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 	jQuery('.selectpicker').selectpicker;
 
 
-	
+
 
 	$('.search-trigger').on('click', function(event) {
 		event.preventDefault();
@@ -32,7 +32,6 @@ jQuery(document).ready(function($) {
 	// var chartsheight = $('.flotRealtime2').height();
 	// $('.traffic-chart').css('height', chartsheight-122);
 
-
 	// Counter Number
 	$('.count').each(function () {
 		$(this).prop('Counter',0).animate({
@@ -47,44 +46,53 @@ jQuery(document).ready(function($) {
 	});
 
 
-	 
-	 
+
+
 	// Menu Trigger
 	$('#menuToggle').on('click', function(event) {
-		var windowWidth = $(window).width();   		 
-		if (windowWidth<1010) { 
-			$('body').removeClass('open'); 
-			if (windowWidth<760){ 
-				$('#left-panel').slideToggle(); 
+		var windowWidth = $(window).width();
+		if (windowWidth<1010) {
+			$('body').removeClass('open');
+			if (windowWidth<760){
+				$('#left-panel').slideToggle();
 			} else {
-				$('#left-panel').toggleClass('open-menu');  
-			} 
+				$('#left-panel').toggleClass('open-menu');
+			}
 		} else {
 			$('body').toggleClass('open');
-			$('#left-panel').removeClass('open-menu');  
-		} 
-			 
-	}); 
+			$('#left-panel').removeClass('open-menu');
+		}
 
-	 
+	});
+
+
 	$(".menu-item-has-children.dropdown").each(function() {
 		$(this).on('click', function() {
 			var $temp_text = $(this).children('.dropdown-toggle').html();
-			$(this).children('.sub-menu').prepend('<li class="subtitle">' + $temp_text + '</li>'); 
+			$(this).children('.sub-menu').prepend('<li class="subtitle">' + $temp_text + '</li>');
 		});
 	});
 
 
-	// Load Resize 
-	$(window).on("load resize", function(event) { 
-		var windowWidth = $(window).width();  		 
+	// Load Resize
+	$(window).on("load resize", function(event) {
+		var windowWidth = $(window).width();
 		if (windowWidth<1010) {
-			$('body').addClass('small-device'); 
+			$('body').addClass('small-device');
 		} else {
-			$('body').removeClass('small-device');  
-		} 
-		
+			$('body').removeClass('small-device');
+		}
+
 	});
-  
- 
+
+
 });
+
+var noDefinition;
+var somethingButNothing = null;
+var catObj = { Breed: 'Calico',
+Name: 'Pinch', Breed: 'Manx', Name: 'Katz', Breed: 'Siamese', Name: 'Sophie'};
+var carArray = ['Ferrari', 'Maserati', 'Lambourghini', 'Yugo'];
+var yeatsString = "This is the way the world ends, not with a bang, but a whimper.";
+var roundNumber = 8;
+var twoTruthsAndALie = true;
